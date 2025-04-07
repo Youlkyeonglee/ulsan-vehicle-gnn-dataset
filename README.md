@@ -58,38 +58,14 @@
 | Total Nodes | 699,184 |
 | Total Edges | 2,679,788 |
 | Node Feature Dimension | 8 |
-| Edge Feature Dimension | 9 |
+| Edge Feature Dimension | 5 or 9 |
 
-### Class Distribution
-| Class | Count | Percentage |
-|------|:-------:|:-------:|
-| 0 (stop) | 363,196 | 51.95% |
-| 1 (lane_change) | 140,514 | 20.10% |
-| 2 (normal_driving) | 195,474 | 27.96% |
+### 데이터셋 분포
 
-### Dataset Splits
-
-#### Training Dataset
-- Total graphs: 1
-- Total nodes: 489,428
-- Class distribution:
-  - Class 0: 254,066 nodes (51.91%)
-  - Class 1: 98,401 nodes (20.11%)
-  - Class 2: 136,961 nodes (27.98%)
-
-#### Validation Dataset
-- Total graphs: 1
-- Total nodes: 104,877
-- Class distribution:
-  - Class 0: 54,674 nodes (52.13%)
-  - Class 1: 21,050 nodes (20.07%)
-  - Class 2: 29,153 nodes (27.80%)
-
-#### Test Dataset
-- Total graphs: 1
-- Total nodes: 104,879
-- Class distribution:
-  - Class 0: 54,456 nodes (51.92%)
-  - Class 1: 21,063 nodes (20.08%)
-  - Class 2: 29,360 nodes (27.99%)
-
+| Category | Train | Validation | Test | Total |
+|------|:-------:|:-------:|:-------:|:-------:|
+| Total Graphs | 1 | 1 | 1 | 3 |
+| Total Nodes | 489,428 | 104,877 | 104,879 | 699,184 |
+| Stop (Class 0) | 254,066 (51.91%) | 54,674 (52.13%) | 54,456 (51.92%) | 363,196 (51.95%) |
+| Lane Change (Class 1) | 98,401 (20.11%) | 21,050 (20.07%) | 21,063 (20.08%) | 140,514 (20.10%) |
+| Normal Driving (Class 2) | 136,961 (27.98%) | 29,153 (27.80%) | 29,360 (27.99%) | 195,474 (27.96%) |
