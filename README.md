@@ -16,7 +16,7 @@
 
 ### Node Labels (Classes)
 | Class Name | Label Value |
-|------------|-------------|
+|------------|:-------------:|
 | stop | 0 |
 | lane_change | 1 |
 | normal_driving | 2 |
@@ -27,7 +27,7 @@
 
 ### Edge Feature Composition (5 or 9 dimensions)
 | Feature Category | Dimensions | Description | Optional |
-|------------------|:------------:|-------------|:---:  |
+|------------------|:------------:|-------------|:---:|
 | Distance | 1 | Distance between two objects |  |
 | Speed | 1 | Neighboring object's velocity |  |
 | Direction | 2 | Neighboring object's dx, dy direction vectors |  |
@@ -48,9 +48,19 @@
 | Edge Features | 5 or 9 dimensions | Represents inter-vehicle relationships |
 | Number of Classes | 3 | Vehicle status classification |
 
+## 4. 시각화 예시
+
+### 차량 감지 및 추적
+![차량 감지 예시](image_data/00000001.jpg)
+*그림 1: 도로에서의 차량 감지 및 식별 예시*
+
+### 차선 변경 행동 식별
+![차선 변경 감지](image_data/lane_annotations_result.jpg)
+*그림 2: 차선 변경 행동 식별 및 차선 표시*
+
 ---
 
-## 4. Dataset Statistics
+## 5. Dataset Statistics
 
 ### Overall Statistics
 | Item | Count |
