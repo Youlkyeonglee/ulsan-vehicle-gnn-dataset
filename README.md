@@ -27,11 +27,11 @@
 
 ### Edge Feature Composition (5 or 9 dimensions)
 | Feature Category | Dimensions | Description | optional |
-|------------------|------------|-------------| -------- |
-| Distance | 1 | Distance between two objects | -------- |
-| Speed | 1 | Neighboring object's velocity | -------- |
-| Direction | 2 | Neighboring object's dx, dy direction vectors | -------- |
-| Acceleration | 1 | Neighboring object's acceleration | -------- |
+|------------------|:------------:|-------------|:---:  |
+| Distance | 1 | Distance between two objects |  |
+| Speed | 1 | Neighboring object's velocity |  |
+| Direction | 2 | Neighboring object's dx, dy direction vectors |  |
+| Acceleration | 1 | Neighboring object's acceleration |  |
 | Neighbor Bounding Box | 4 | Neighboring object's center_x, center_y, width, height | 5 or 9 dims |
 
 ### Edge Creation Rules
