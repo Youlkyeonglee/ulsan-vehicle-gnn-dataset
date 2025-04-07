@@ -1,33 +1,52 @@
-# Ulsan Vehicle GNN Dataset
+# Vehicle Graph Data Structure Analysis
 
-# 차량 그래프 데이터 구조 분석
-## 1. 노드(Node) 데이터
-### 노드 특성 구성 (8차원)
-| 특성 구분 | 차원 | 설명 |
-|----------|-----|------|
-| 바운딩 박스 | 4 | center_x, center_y, width, height |
-| 속도 | 1 | 객체의 속도 정보 |
-| 방향 | 2 | dx, dy (방향 벡터) |
-| 가속도 | 1 | 객체의 가속도 정보 |
-### 노드 식별 정보
-- 고유 식별자: (object_id, frame) 쌍
-- 동일 객체도 다른 프레임에서는 별도 노드로 취급
-### 노드 레이블 (클래스)
-| 클래스명 | 레이블 값 |
-|---------|---------|
+## 1. Node Data
+
+### Node Feature Composition (8 dimensions)
+| Feature Category | Dimensions | Description |
+|------------------|------------|-------------|
+| Bounding Box | 4 | center_x, center_y, width, height |
+| Speed | 1 | Object's velocity information |
+| Direction | 2 | dx, dy (direction vector) |
+| Acceleration | 1 | Object's acceleration information |
+
+### Node Identification
+- Unique identifier: (object_id, frame) pair
+- Same object in different frames is treated as separate nodes
+
+### Node Labels (Classes)
+| Class Name | Label Value |
+|------------|-------------|
 | stop | 0 |
 | lane_change | 1 |
 | normal_driving | 2 |
-## 2. 엣지(Edge) 데이터
-### 엣지 특성 구성 (9차원)
-| 특성 구분 | 차원 | 설명 |
-|----------|-----|------|
-| 거리 | 1 | 두 객체 간의 거리 |
-| 속도 | 1 | 이웃 객체의 속도 |
-| 방향 | 2 | 이웃 객체의 dx, dy 방향 벡터 |
-| 가속도 | 1 | 이웃 객체의 가속도 |
-| 이웃 바운딩 박스 | 4 | 이웃 객체의 center_x, center_y, width, height |
-### 엣지 생성 규칙
-- 각 객체는 최대 4개의 이웃 객체와 연결됨
-- 동일 프레임 내에서만 엣지 생성 (neighbors_ids 필드 활용)
-- 방향성 그래프 (소스 노드 → 타겟 노드)
+
+---
+
+## 2. Edge Data
+
+### Edge Feature Composition (9 dimensions)
+| Feature Category | Dimensions | Description |
+|------------------|------------|-------------|
+| Distance | 1 | Distance between two objects |
+| Speed | 1 | Neighboring object's velocity |
+| Direction | 2 | Neighboring object's dx, dy direction vectors |
+| Acceleration | 1 | Neighboring object's acceleration |
+| Neighbor Bounding Box | 4 | Neighboring object's center_x, center_y, width, height |
+
+### Edge Creation Rules
+- Each object is connected to a maximum of 4 neighboring objects
+- Edges are created only within the same frame (using the neighbors_ids field)
+- Directed graph (source node → target node)
+
+---
+
+## 3. Data Summary
+| Item | Value | Notes |
+|------|-------|-------|
+| Node Features | 8 dimensions | Represents vehicle's physical state |
+| Edge Features | 9 dimensions | Represents inter-vehicle relationships |
+| Number of Classes | 3 | Vehicle state classification |
+
+## 결론
+이 데이터 구조는 차량 행동 패턴을 그래프로 모델링하며, AttributeAwareGraphSAGE와 같은 GNN 모델이 이러한 노드 및 엣지 특성을 효과적으로 활용하여 차량 행동을 분류할 수 있습니다.
