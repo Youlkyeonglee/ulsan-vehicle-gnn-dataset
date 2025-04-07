@@ -50,6 +50,7 @@
 
 ## 4. Visualization Examples
 - Image Size:  1600x1200 pixels
+
 | Vehicle Detection and Tracking | Lane Change Behavior Identification |
 |:---:|:---:|
 | ![Vehicle Detection Example](image_data/00000001.jpg) | ![Lane Change Detection](image_data/lane_annotations_result.jpg) |
