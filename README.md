@@ -44,9 +44,7 @@
 ## 3. Data Summary
 | Item | Value | Notes |
 |------|-------|-------|
-| Node Features | 8 dimensions | Represents vehicle's physical state |
-| Edge Features | 9 dimensions | Represents inter-vehicle relationships |
-| Number of Classes | 3 | Vehicle state classification |
+| Node Features | 8 dimensions | Represents vehicle's physical status |
+| Edge Features | 5 or 9 dimensions | Represents inter-vehicle relationships |
+| Number of Classes | 3 | Vehicle status classification |
 
-## 결론
-이 데이터 구조는 차량 행동 패턴을 그래프로 모델링하며, AttributeAwareGraphSAGE와 같은 GNN 모델이 이러한 노드 및 엣지 특성을 효과적으로 활용하여 차량 행동을 분류할 수 있습니다.
