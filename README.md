@@ -60,7 +60,7 @@
 | Node Feature Dimension | 8 |
 | Edge Feature Dimension | 5 or 9 |
 
-### 데이터셋 분포
+### Dataset Distribution
 
 | Category | Train | Validation | Test | Total |
 |------|:-------:|:-------:|:-------:|:-------:|
