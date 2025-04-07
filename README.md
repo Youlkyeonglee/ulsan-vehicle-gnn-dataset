@@ -54,7 +54,7 @@
 | Vehicle Detection and Tracking | Lane Change Behavior Identification |
 |:---:|:---:|
 | ![Vehicle Detection Example](image_data/00000001.jpg) | ![Lane Change Detection](image_data/lane_annotations_result.jpg) |
-| *Figure 1: Vehicle detection and identification on the road* | *Figure 2: Lane Annotations* |
+| *Figure 1: Original Image in Ulsan Industrial Tower Rotary* | *Figure 2: Lane Annotations* |
 
 ---
 
